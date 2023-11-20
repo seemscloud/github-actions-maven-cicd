@@ -21,10 +21,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           architecture: x64
-      - name: "[Build] Maven Clean Package"
+      - name: "[Maven] Package"
         run: |
           mvn clean package --no-transfer-progress
-      - name: "[Version] Bump Version"
+      - name: "[Version] Bump"
         run: |
           git config --global user.email "version@seems.cloud"
           git config --global user.name "VersionBot"
