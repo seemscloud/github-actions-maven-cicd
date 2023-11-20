@@ -14,7 +14,7 @@
     </parent>
 
     <modules>
-        <module>debug</module>
+<!--        <module>debug</module>-->
 <!--        <module>fastapi</module>-->
 <!--        <module>grpc-client</module>-->
 <!--        <module>grpc-server</module>-->

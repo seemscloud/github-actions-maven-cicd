@@ -23,6 +23,7 @@ jobs:
           architecture: x64
       - name: "[Maven] Package"
         run: |
+          env
           mvn clean package --no-transfer-progress
       - name: "[Version] Bump"
         run: |
