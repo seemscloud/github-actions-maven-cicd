@@ -23,7 +23,7 @@ jobs:
           architecture: x64
       - name: "[Build] Maven Clean Package"
         run: |
-          mvn clean package
+          mvn clean package --no-transfer-progress
           git config --global user.email "versioner@seems.cloud"
           git config --global user.name "VersionerBot"
-          mvn clean install
+          mvn clean install --no-transfer-progress
