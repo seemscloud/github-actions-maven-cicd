@@ -26,6 +26,6 @@ jobs:
           mvn clean package --no-transfer-progress
       - name: "[Version] Bump Version"
         run: |
-          git config --global user.email "versioner@seems.cloud"
-          git config --global user.name "VersionerBot"
+          git config --global user.email "version@seems.cloud"
+          git config --global user.name "VersionBot"
           mvn clean install --no-transfer-progress
