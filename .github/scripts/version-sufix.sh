@@ -23,3 +23,5 @@ else
 fi
 
 export VERSION_SUFIX
+
+echo "Version Sufix: ${VERSION_SUFIX}"
