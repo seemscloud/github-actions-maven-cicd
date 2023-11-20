@@ -29,4 +29,5 @@ jobs:
       - name: "[Maven] Package"
         run: |
           export CUSTOM_GITHUB_SHA="`/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/short-commit.sh`"
+          echo "${CUSTOM_GITHUB_SHA}"
           mvn clean package --no-transfer-progress
