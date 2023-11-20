@@ -63,9 +63,9 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <scmReleaseCommitComment>[Versioner] Version @{releaseLabel}</scmReleaseCommitComment>
-                    <scmDevelopmentCommitComment>[Versioner] Bump Patch version</scmDevelopmentCommitComment>
-                    <scmRollbackCommitComment>[Versioner] Rollback the release of @{releaseLabel}
+                    <scmReleaseCommitComment>[Release] Release @{releaseLabel}</scmReleaseCommitComment>
+                    <scmDevelopmentCommitComment>[Release] Bump Version</scmDevelopmentCommitComment>
+                    <scmRollbackCommitComment>[Release] Rollback the release of @{releaseLabel}
                     </scmRollbackCommitComment>
 
                     <tagNameFormat>@{project.version}</tagNameFormat>
