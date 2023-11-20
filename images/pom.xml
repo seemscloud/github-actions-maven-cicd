@@ -10,11 +10,11 @@
     <parent>
         <artifactId>cicd</artifactId>
         <groupId>com.seemscloud.cicd</groupId>
-        <version>1.4.10-SNAPSHOT</version>
+        <version>1.4.12-SNAPSHOT</version>
     </parent>
 
     <modules>
-        <module>empty</module>
+        <!--        <module>empty</module>-->
         <!--        <module>debug</module>-->
         <!--        <module>fastapi</module>-->
         <!--        <module>grpc-client</module>-->
