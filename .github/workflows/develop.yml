@@ -29,7 +29,4 @@ jobs:
       - name: "[Maven] Package"
         run: |
           export VERSION_SUFFIX=$(/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh)
-          # export VERSION_SUFFIX=$(/bin/bash .github/scripts/version-suffix.sh)
-          echo "Version Suffix: ${VERSION_SUFFIX}"
-          
           mvn clean package --no-transfer-progress
