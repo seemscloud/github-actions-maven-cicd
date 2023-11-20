@@ -27,4 +27,6 @@ jobs:
           distribution: 'temurin'
           architecture: x64
       - name: "[Maven] Package"
-        run: mvn clean package --no-transfer-progress
+        run: |
+          env
+          mvn clean package --no-transfer-progress
