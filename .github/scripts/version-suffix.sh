@@ -16,9 +16,11 @@ elif [[ "${GITHUB_REF}" =~ ${BUGFIX_REGEX} ]]; then
 elif [[ "${GITHUB_REF}" =~ ${RELEASE_REGEX} ]]; then
   VERSION_SUFFIX="bugfix-${GITHUB_SHA_SHORT}"
 else
-  VERSION_SUFFIX="develop-${GITHUB_SHA_SHORT}"
+  if [ -z "${GITHUB_SHA_SHORT}" ] ; then
+    VERSION_SUFFIX="develop"
+  else
+    VERSION_SUFFIX="develop-${GITHUB_SHA_SHORT}"
+  fi
 fi
 
-export VERSION_SUFFIX
-
-echo "Version Sufix: ${VERSION_SUFFIX}"
+echo "${VERSION_SUFFIX}"

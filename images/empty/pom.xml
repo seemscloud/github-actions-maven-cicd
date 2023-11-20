@@ -23,7 +23,7 @@
                     <images>
                         <image>
                             <alias>empty</alias>
-                            <name>${env.DOCKER_REPO}/empty:latest</name>
+                            <name>${env.DOCKER_REPO}/empty:latest-${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>
@@ -31,7 +31,7 @@
                         </image>
                         <image>
                             <alias>empty</alias>
-                            <name>${env.DOCKER_REPO}/empty:${project.version}</name>
+                            <name>${env.DOCKER_REPO}/empty:${project.version}-${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>
