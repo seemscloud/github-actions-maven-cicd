@@ -29,6 +29,7 @@
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>
                                 <tags>
+                                    <tag>latest-${env.VERSION_SUFFIX}</tag>
                                     <tag>${project.version}-${env.VERSION_SUFFIX}</tag>
                                 </tags>
                             </build>
