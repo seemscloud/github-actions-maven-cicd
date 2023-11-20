@@ -10,7 +10,7 @@
     <parent>
         <artifactId>cicd</artifactId>
         <groupId>com.seemscloud.cicd</groupId>
-        <version>1.4.7</version>
+        <version>1.4.8-SNAPSHOT</version>
     </parent>
 
     <modules>
