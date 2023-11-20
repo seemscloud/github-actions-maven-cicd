@@ -28,5 +28,6 @@ jobs:
           architecture: x64
       - name: "[Maven] Package"
         run: |
-          /bin/bash ${GITHUB_WORKSPACE}/.github/scripts/short-commit.sh
+          /bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh
+          
           mvn clean package --no-transfer-progress
