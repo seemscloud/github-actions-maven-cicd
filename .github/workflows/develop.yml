@@ -1,10 +1,11 @@
-name: "build"
+name: "develop"
 
 on:
   push:
     branches:
       - 'bugfix/*'
       - 'feature/*'
+      - 'hotfix/*'
 
 jobs:
   build-images:
