@@ -24,6 +24,8 @@ jobs:
       - name: "[Build] Maven Clean Package"
         run: |
           mvn clean package --no-transfer-progress
+      - name: "[Version] Bump Version"
+        run: |
           git config --global user.email "versioner@seems.cloud"
           git config --global user.name "VersionerBot"
           mvn clean install --no-transfer-progress
