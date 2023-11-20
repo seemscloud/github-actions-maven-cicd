@@ -28,16 +28,16 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           architecture: x64
-#      - name: "[Maven] Build (Develop, Versioning Disabled)"
-#        if: startsWith(github.ref, 'refs/heads/feature/') || startsWith(github.ref, 'refs/heads/bugfix/') || startsWith(github.ref, 'refs/heads/hotfix/')
-#        run: |
-#          export VERSION_SUFFIX=$(/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh)
-#          mvn clean package --no-transfer-progress
-#      - name: "[Maven] Build (Release, Versioning Enabled)"
-#        if: startsWith(github.ref, 'refs/heads/release/')
-#        run: |
-#          git config --global user.email "release@seems.cloud"
-#          git config --global user.name "ReleaseBot"
-#
-#          export VERSION_SUFFIX=$(/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh)
-#          mvn clean install --no-transfer-progress
+      - name: "[Maven] Build (Develop, Versioning Disabled)"
+        if: startsWith(github.ref, 'refs/heads/feature/') || startsWith(github.ref, 'refs/heads/bugfix/') || startsWith(github.ref, 'refs/heads/hotfix/')
+        run: |
+          export VERSION_SUFFIX=$(/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh)
+          mvn clean package --no-transfer-progress
+      - name: "[Maven] Build (Release, Versioning Enabled)"
+        if: startsWith(github.ref, 'refs/heads/release/')
+        run: |
+          git config --global user.email "release@seems.cloud"
+          git config --global user.name "ReleaseBot"
+
+          export VERSION_SUFFIX=$(/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh)
+          mvn clean install --no-transfer-progress
