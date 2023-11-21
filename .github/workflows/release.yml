@@ -7,10 +7,10 @@ on:
         required: true
         type: choice
         description: Force (bump version)?
-        default: False
+        default: false
         options:
-          - True
-          - False
+          - true
+          - false
   pull_request_target:
     branches: [ 'release/*', 'main' ]
     types: [ closed ]
