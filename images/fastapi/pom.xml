@@ -23,15 +23,7 @@
                     <images>
                         <image>
                             <alias>fastapi</alias>
-                            <name>seemscloud/fastapi:latest</name>
-                            <build>
-                                <contextDir>${project.basedir}</contextDir>
-                                <filter>@</filter>
-                            </build>
-                        </image>
-                        <image>
-                            <alias>fastapi</alias>
-                            <name>seemscloud/fastapi:${project.version}</name>
+                            <name>${env.DOCKER_REPO}/fastapi:${project.version}-${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>

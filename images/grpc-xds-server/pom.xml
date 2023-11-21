@@ -23,15 +23,7 @@
                     <images>
                         <image>
                             <alias>grpc-xds-server</alias>
-                            <name>seemscloud/grpc-xds-server:latest</name>
-                            <build>
-                                <contextDir>${project.basedir}</contextDir>
-                                <filter>@</filter>
-                            </build>
-                        </image>
-                        <image>
-                            <alias>grpc-xds-server</alias>
-                            <name>seemscloud/grpc-xds-server:${project.version}</name>
+                            <name>${env.DOCKER_REPO}/grpc-xds-server:${project.version}-${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>
