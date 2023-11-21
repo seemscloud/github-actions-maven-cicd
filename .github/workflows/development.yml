@@ -4,6 +4,8 @@ on:
   push:
     branches: [ 'bugfix/*', 'feature/*' , 'hotfix/*' ]
 
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,8 +29,9 @@ jobs:
       - uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{secrets.SSH_BOT_SEEMS_CLOUD}}
-
-      - name: "[Maven] Build (Release, Versioning Enabled)"
+      - name: "[Script] Version Suffix"
         run: |
           export VERSION_SUFFIX=$(/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh)
+      - name: "[Maven] Build (Release, Versioning Enabled)"
+        run: |
           mvn clean package --no-transfer-progress
