@@ -6,13 +6,13 @@
 
     <artifactId>cicd</artifactId>
     <groupId>com.seemscloud.cicd</groupId>
-    <version>1.4.20-SNAPSHOT</version>
+    <version>1.4.20</version>
 
     <scm>
         <url>https://github.com/seemscloud/github-actions-maven-cicd</url>
         <connection>scm:git:git@github.com:seemscloud/github-actions-maven-cicd.git</connection>
         <developerConnection>scm:git:git@github.com:seemscloud/github-actions-maven-cicd.git</developerConnection>
-        <tag>${env.GITHUB_REF_NAME}</tag>
+        <tag>1.4.20</tag>
     </scm>
 
     <modules>
