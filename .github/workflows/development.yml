@@ -6,6 +6,7 @@ on:
       force:
         required: true
         type: bool
+        default: 'false'
   push:
     branches: [ 'bugfix/*', 'feature/*' , 'hotfix/*' ]
 
