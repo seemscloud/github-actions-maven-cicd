@@ -7,17 +7,17 @@ on:
         required: true
         type: choice
         description: Force (bump version)?
-        default: false
+        default: 'false'
         options:
-          - true
-          - false
+          - 'true'
+          - 'false'
   pull_request_target:
     branches: [ 'release/*', 'main' ]
     types: [ closed ]
 
 jobs:
   build:
-    if: (github.event.pull_request.merged == true) || github.event.inputs.force == true
+    if: (github.event.pull_request.merged == true) || github.event.inputs.force == 'true'
     runs-on: ubuntu-latest
     env:
       DOCKER_REPO: "seemscloud"
