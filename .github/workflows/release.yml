@@ -5,8 +5,11 @@ on:
     inputs:
       force:
         required: true
-        type: bool
-        default: 'false'
+        type: choice
+        description: Force (bump version)?
+        options:
+          - true
+          - false
   pull_request_target:
     branches: [ 'release/*', 'main' ]
     types: [ closed ]
