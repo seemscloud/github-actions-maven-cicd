@@ -3,20 +3,11 @@ name: "development"
 on:
   workflow_dispatch:
     inputs:
-      branch:
+      force:
         required: true
-        type: string
-      environment:
-        type: choice
-        description: which environment
-        options:
-          - dev
-          - stage
-          - prod
+        type: bool
   push:
     branches: [ 'bugfix/*', 'feature/*' , 'hotfix/*' ]
-
-
 
 jobs:
   build:
