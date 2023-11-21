@@ -27,9 +27,8 @@ jobs:
       - uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{secrets.SSH_BOT_SEEMS_CLOUD}}
-      - name: "[Script] Version Suffix"
+
+      - name: "[Maven] Build (Release, Versioning Enabled)"
         run: |
           export VERSION_SUFFIX=$(/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh)
-          echo "${VERSION_SUFFIX}"
-      - name: "[Maven] Build (Release, Versioning Enabled)"
-        run: mvn clean package --no-transfer-progress
+          mvn clean package --no-transfer-progress
