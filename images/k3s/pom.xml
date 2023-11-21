@@ -23,7 +23,7 @@
                     <images>
                         <image>
                             <alias>k3s</alias>
-                            <name>${env.DOCKER_REPO}/k3s:${project.version}-${env.VERSION_SUFFIX}</name>
+                            <name>${env.DOCKER_REPO}/k3s:${project.version}${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>

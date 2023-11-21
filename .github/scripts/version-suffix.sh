@@ -8,13 +8,13 @@ HOTFIX_REGEX="refs/heads/hotfix/.*"
 BUGFIX_REGEX="refs/heads/bugfix/.*"
 
 if [[ "${GITHUB_REF}" =~ ${FEATURE_REGEX} ]]; then
-  VERSION_SUFFIX="feature-${GITHUB_SHA_SHORT}"
+  VERSION_SUFFIX="-feature-${GITHUB_SHA_SHORT}"
 elif [[ "${GITHUB_REF}" =~ ${HOTFIX_REGEX} ]]; then
-  VERSION_SUFFIX="hotfix-${GITHUB_SHA_SHORT}"
+  VERSION_SUFFIX="-hotfix-${GITHUB_SHA_SHORT}"
 elif [[ "${GITHUB_REF}" =~ ${BUGFIX_REGEX} ]]; then
-  VERSION_SUFFIX="bugfix-${GITHUB_SHA_SHORT}"
+  VERSION_SUFFIX="-bugfix-${GITHUB_SHA_SHORT}"
 elif [[ "${GITHUB_REF}" =~ ${RELEASE_REGEX} ]]; then
-  VERSION_SUFFIX="release"
+  VERSION_SUFFIX="-release"
 else
   VERSION_SUFFIX=""
 fi

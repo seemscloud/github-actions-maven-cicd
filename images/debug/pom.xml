@@ -23,7 +23,7 @@
                     <images>
                         <image>
                             <alias>debug</alias>
-                            <name>${env.DOCKER_REPO}/debug:${project.version}-${env.VERSION_SUFFIX}</name>
+                            <name>${env.DOCKER_REPO}/debug:${project.version}${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>

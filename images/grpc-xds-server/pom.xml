@@ -23,7 +23,7 @@
                     <images>
                         <image>
                             <alias>grpc-xds-server</alias>
-                            <name>${env.DOCKER_REPO}/grpc-xds-server:${project.version}-${env.VERSION_SUFFIX}</name>
+                            <name>${env.DOCKER_REPO}/grpc-xds-server:${project.version}${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>
