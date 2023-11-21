@@ -14,7 +14,7 @@
         <!--        <developerConnection>scm:git:https://github.com/seemscloud/github-actions-maven-cicd.git</developerConnection>-->
         <connection>scm:git:git@github.com:seemscloud/github-actions-maven-cicd.git</connection>
         <developerConnection>scm:git:git@github.com:seemscloud/github-actions-maven-cicd.git</developerConnection>
-        <tag>1.4.15</tag>
+        <tag>1.4.15-SNAPSHOT</tag>
     </scm>
 
     <modules>
@@ -73,7 +73,7 @@
 
                     <projectVersionPolicyId>ConventionalCommitsVersionPolicy</projectVersionPolicyId>
                     <projectVersionPolicyConfig>
-                        <versionTag>^([0-9]+\.[0-9]+\.[0-9]+)$</versionTag>
+                        <versionTag>^([0-9]+\.[0-9]+\.[0-9]+)-SNAPSHOT$</versionTag>
                         <minorRules>
                             <majorRule>^feat: .*$</majorRule>
                         </minorRules>
