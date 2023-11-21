@@ -2,7 +2,9 @@ name: "release"
 
 on:
   push:
-    branches: [ 'release/*' ]
+    branches: [ 'release/*', 'main' ]
+  pull_request_review:
+    types: [ submitted ]
 
 jobs:
   build:
