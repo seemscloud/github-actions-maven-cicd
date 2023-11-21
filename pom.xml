@@ -65,7 +65,7 @@
                     <scmRollbackCommitComment>[Release] Rollback the release of @{releaseLabel}
                     </scmRollbackCommitComment>
 
-                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <tagNameFormat>@{project.version}-SNAPSHOT</tagNameFormat>
                     <pushChanges>true</pushChanges>
                     <remoteTagging>true</remoteTagging>
 
