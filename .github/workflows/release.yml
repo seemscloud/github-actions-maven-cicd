@@ -2,7 +2,9 @@ name: "build"
 
 on:
   push:
-    branches: [ 'bugfix/*', 'feature/*' , 'hotfix/*' ]
+    branches: [ 'release/*' ]
+  pull_request_review:
+    types: [ submitted ]
 
 jobs:
   build:
@@ -29,5 +31,8 @@ jobs:
           ssh-private-key: ${{secrets.SSH_BOT_SEEMS_CLOUD}}
       - name: "[Maven] Build (Release, Versioning Enabled)"
         run: |
+          git config --global user.email "bot@seems.cloud"
+          git config --global user.name "Bot"
+
           export VERSION_SUFFIX=$(/bin/bash ${GITHUB_WORKSPACE}/.github/scripts/version-suffix.sh)
-          mvn clean package --no-transfer-progress
+          mvn clean install --no-transfer-progress
