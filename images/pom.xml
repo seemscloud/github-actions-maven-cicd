@@ -14,13 +14,13 @@
     </parent>
 
     <modules>
-        <!--        <module>empty</module>-->
-        <!--        <module>debug</module>-->
-        <!--        <module>fastapi</module>-->
-        <!--        <module>grpc-client</module>-->
-        <!--        <module>grpc-server</module>-->
-        <!--        <module>grpc-xds-server</module>-->
-        <!--        <module>k3s</module>-->
+        <module>empty</module>
+        <module>debug</module>
+        <module>fastapi</module>
+        <module>grpc-client</module>
+        <module>grpc-server</module>
+        <module>grpc-xds-server</module>
+        <module>k3s</module>
     </modules>
 
     <build>
