@@ -10,7 +10,7 @@
     <parent>
         <artifactId>cicd.images</artifactId>
         <groupId>com.seemscloud.cicd.images</groupId>
-        <version>1.4.6-SNAPSHOT</version>
+        <version>1.4.32-SNAPSHOT</version>
     </parent>
 
     <build>
@@ -23,15 +23,7 @@
                     <images>
                         <image>
                             <alias>grpc-client</alias>
-                            <name>seemscloud/grpc-client:latest</name>
-                            <build>
-                                <contextDir>${project.basedir}</contextDir>
-                                <filter>@</filter>
-                            </build>
-                        </image>
-                        <image>
-                            <alias>grpc-client</alias>
-                            <name>seemscloud/grpc-client:${project.version}</name>
+                            <name>${env.DOCKER_REPO}/grpc-client:${project.version}-${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>

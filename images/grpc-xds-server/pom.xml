@@ -10,7 +10,7 @@
     <parent>
         <artifactId>cicd.images</artifactId>
         <groupId>com.seemscloud.cicd.images</groupId>
-        <version>1.4.6-SNAPSHOT</version>
+        <version>1.4.32-SNAPSHOT</version>
     </parent>
 
     <build>
@@ -23,15 +23,7 @@
                     <images>
                         <image>
                             <alias>grpc-xds-server</alias>
-                            <name>seemscloud/grpc-xds-server:latest</name>
-                            <build>
-                                <contextDir>${project.basedir}</contextDir>
-                                <filter>@</filter>
-                            </build>
-                        </image>
-                        <image>
-                            <alias>grpc-xds-server</alias>
-                            <name>seemscloud/grpc-xds-server:${project.version}</name>
+                            <name>${env.DOCKER_REPO}/grpc-xds-server:${project.version}-${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>

@@ -10,7 +10,7 @@
     <parent>
         <artifactId>cicd.images</artifactId>
         <groupId>com.seemscloud.cicd.images</groupId>
-        <version>1.4.8-SNAPSHOT</version>
+        <version>1.4.32-SNAPSHOT</version>
     </parent>
 
     <build>
@@ -23,15 +23,7 @@
                     <images>
                         <image>
                             <alias>debug</alias>
-                            <name>${env.DOCKER_REPO}/debug:latest</name>
-                            <build>
-                                <contextDir>${project.basedir}</contextDir>
-                                <filter>@</filter>
-                            </build>
-                        </image>
-                        <image>
-                            <alias>debug</alias>
-                            <name>${env.DOCKER_REPO}/debug:${project.version}</name>
+                            <name>${env.DOCKER_REPO}/debug:${project.version}-${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>

@@ -10,7 +10,7 @@
     <parent>
         <artifactId>cicd.images</artifactId>
         <groupId>com.seemscloud.cicd.images</groupId>
-        <version>1.4.6-SNAPSHOT</version>
+        <version>1.4.32-SNAPSHOT</version>
     </parent>
 
     <build>
@@ -22,16 +22,8 @@
                     <verbose>true</verbose>
                     <images>
                         <image>
-                            <alias>debug</alias>
-                            <name>seemscloud/debug:latest</name>
-                            <build>
-                                <contextDir>${project.basedir}</contextDir>
-                                <filter>@</filter>
-                            </build>
-                        </image>
-                        <image>
-                            <alias>debug</alias>
-                            <name>seemscloud/debug:${project.version}</name>
+                            <alias>k3s</alias>
+                            <name>${env.DOCKER_REPO}/k3s:${project.version}-${env.VERSION_SUFFIX}</name>
                             <build>
                                 <contextDir>${project.basedir}</contextDir>
                                 <filter>@</filter>
