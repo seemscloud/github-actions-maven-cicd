@@ -2,13 +2,18 @@ name: "release"
 
 on:
   workflow_dispatch:
+    inputs:
+      force:
+        required: true
+        type: bool
+        default: 'false'
   pull_request_target:
     branches: [ 'release/*', 'main' ]
     types: [ closed ]
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || ${{ inputs.debug_mode == 'true' }}
     runs-on: ubuntu-latest
     env:
       DOCKER_REPO: "seemscloud"

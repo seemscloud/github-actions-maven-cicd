@@ -1,12 +1,6 @@
 name: "development"
 
 on:
-  workflow_dispatch:
-    inputs:
-      force:
-        required: true
-        type: bool
-        default: 'false'
   push:
     branches: [ 'bugfix/*', 'feature/*' , 'hotfix/*' ]
 
