@@ -2,6 +2,12 @@ name: "release"
 
 on:
   workflow_dispatch:
+    inputs:
+      env:
+        description: 'env'
+        required: true
+        type: choice
+        options: ...
   pull_request_target:
     branches: [ 'release/*', 'main' ]
     types: [ closed ]
