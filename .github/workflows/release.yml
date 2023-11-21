@@ -2,6 +2,7 @@ name: "release"
 
 on:
   pull_request_review:
+    branches: [ 'release/*', 'main' ]
     types: [ submitted ]
 
 jobs:
