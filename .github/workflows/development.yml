@@ -2,13 +2,17 @@ name: "development"
 
 on:
   workflow_dispatch:
-  workflow_call:
     inputs:
-      forceCollate:
-        description: "Whether or not to run the full collation process if no transcriptions changed"
-        required: false
-        type: boolean
-        default: false
+      branch:
+        required: true
+        type: string
+      environment:
+        type: choice
+        description: which environment
+        options:
+          - dev
+          - stage
+          - prod
   push:
     branches: [ 'bugfix/*', 'feature/*' , 'hotfix/*' ]
 
