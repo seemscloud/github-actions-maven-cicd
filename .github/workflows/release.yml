@@ -2,13 +2,6 @@ name: "release"
 
 on:
   workflow_dispatch:
-  workflow_call:
-    inputs:
-      forceCollate:
-        description: "Whether or not to run the full collation process if no transcriptions changed"
-        required: false
-        type: boolean
-        default: false
   pull_request_target:
     branches: [ 'release/*', 'main' ]
     types: [ closed ]
