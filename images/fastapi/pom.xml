@@ -10,7 +10,7 @@
     <parent>
         <artifactId>cicd.images</artifactId>
         <groupId>com.seemscloud.cicd.images</groupId>
-        <version>1.4.33</version>
+        <version>1.4.34-SNAPSHOT</version>
     </parent>
 
     <build>
