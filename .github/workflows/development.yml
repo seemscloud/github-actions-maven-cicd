@@ -1,6 +1,7 @@
 name: "development"
 
 on:
+  workflow_dispatch:
   push:
     branches: [ 'bugfix/*', 'feature/*' , 'hotfix/*' ]
 
