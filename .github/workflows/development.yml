@@ -4,6 +4,8 @@ on:
   push:
     branches: [ 'bugfix/*', 'feature/*' , 'hotfix/*' ]
 
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
