@@ -17,7 +17,7 @@ on:
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true || ${{ inputs.force == 'true' }}
+    if: github.event.pull_request.merged == true || ${{ inputs.force == 'True' }}
     runs-on: ubuntu-latest
     env:
       DOCKER_REPO: "seemscloud"
