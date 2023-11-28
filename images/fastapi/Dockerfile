@@ -26,6 +26,6 @@ USER "${USER_NAME}"
 COPY ./src/* .
 
 RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install --upgrade hypercorn uvicorn fastapi
+    python3 -m pip install --upgrade hypercorn uvicorn fastapi elastic-apm
 
 ENTRYPOINT ["/bin/bash", "/docker-entrypoint.sh"]
